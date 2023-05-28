@@ -7,7 +7,7 @@ import { footerVariants, staggerChildren, textVariant, textVariant2 } from "@/ut
 import { useTranslation } from "react-i18next"
 
 const People = () => {
-  const {t} =useTranslation()
+  const { t } = useTranslation()
   return (
     <motion.section
       variants={staggerChildren}
@@ -34,7 +34,7 @@ const People = () => {
             {comments.map((comment, i) => {
               return (
                 <div className={`flexCenter ${css.comment}`} key={i}>
-                  <img src={comment.img} alt="" />
+                  <img loading="lazy" src={comment.img} alt="" />
                   <p>{t(comment.comment)}</p>
                   <div className={css.line}></div>
                   <div className={css.bio}>
